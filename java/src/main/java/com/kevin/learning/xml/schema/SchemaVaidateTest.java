@@ -31,17 +31,17 @@ public class SchemaVaidateTest {
 			try {
 				Schema countrySchema = factory.newSchema(countryXSD.getURL());
 				try {
-						Country australia = new Country();
-					   australia.setName( "Australia" );
-					   australia.setCapital( "Camberra" );
-					   australia.setFoundation( LocalDate.of( 1788, 01, 26 ) );
-//					   australia.setContinent( "Oceania" );
-					   australia.setContinent( "China" );
-//					   australia.setImportance( 1 );
-					
+					Country australia = new Country();
+					australia.setName("Australia");
+					australia.setCapital("Camberra");
+					australia.setFoundation(LocalDate.of(1788, 01, 26));
+					// australia.setContinent( "Oceania" );
+					australia.setContinent("Oceania");
+					// australia.setImportance( 1 );
+
 					JAXBContext jaxbContext = JAXBContext.newInstance(Country.class);
-					JAXBSource source = new JAXBSource(jaxbContext ,australia);
-					
+					JAXBSource source = new JAXBSource(jaxbContext, australia);
+
 					Validator validator = countrySchema.newValidator();
 					
 					//DefaultHandler ÊÇÒ»¸öAdapter 
