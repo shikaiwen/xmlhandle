@@ -19,6 +19,11 @@ import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
+/**
+ * ²Î¿¼ÎÄÕÂµØÖ·£ºhttp://www.javacodegeeks.com/2015/04/%E7%94%A8%E4%BA%8Ejava%E5%92%8Cxml%E7%BB%91%E5%AE%9A%E7%9A%84jaxb%E6%95%99%E7%A8%8B.html
+ * @author root
+ *
+ */
 public class SchemaVaidateTest {
 
 	@Test
@@ -38,7 +43,6 @@ public class SchemaVaidateTest {
 					// australia.setContinent( "Oceania" );
 					australia.setContinent("Oceania");
 					// australia.setImportance( 1 );
-
 					JAXBContext jaxbContext = JAXBContext.newInstance(Country.class);
 					JAXBSource source = new JAXBSource(jaxbContext, australia);
 

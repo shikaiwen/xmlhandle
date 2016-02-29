@@ -4,19 +4,18 @@ import java.time.LocalDate;
 
 import javax.xml.bind.annotation.adapters.XmlAdapter;
 
-@SuppressWarnings("rawtypes")
-public class MyDateAdapter extends XmlAdapter{
+public class MyDateAdapter extends XmlAdapter<String,LocalDate>{
 
 	@Override
-	public LocalDate unmarshal(Object v) throws Exception {
-		String str = v.toString();
-		return LocalDate.parse(str);
+	public LocalDate unmarshal(String v) throws Exception {
+		return LocalDate.parse(v);
 	}
 
 	@Override
-	public String marshal(Object v) throws Exception {
-		
+	public String marshal(LocalDate v) throws Exception {
 		return v.toString();
 	}
+
+	
 
 }

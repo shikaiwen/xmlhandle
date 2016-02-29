@@ -11,7 +11,6 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 @XmlType(name="tK",namespace="http://www.kevin.com/",
 propOrder = { "name", "capital", "foundation", "continent", "population" } )
 @XmlRootElement(name="Country")
-
 public class Country {
 
 	private String name;

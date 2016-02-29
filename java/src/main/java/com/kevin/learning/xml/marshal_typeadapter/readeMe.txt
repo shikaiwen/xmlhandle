@@ -1,0 +1,2 @@
+将Map转为List这里没完成，这种方式不好，参考这里：http://stackoverflow.com/questions/17024050/jaxb-xmladapter-map-list-adapter-marshall-only
+就可以完成
