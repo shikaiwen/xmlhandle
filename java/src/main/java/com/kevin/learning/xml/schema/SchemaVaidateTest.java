@@ -1,7 +1,6 @@
 package com.kevin.learning.xml.schema;
 
 import java.io.IOException;
-import java.time.LocalDate;
 
 import javax.xml.XMLConstants;
 import javax.xml.bind.JAXBContext;
@@ -39,7 +38,7 @@ public class SchemaVaidateTest {
 					Country australia = new Country();
 					australia.setName("Australia");
 					australia.setCapital("Camberra");
-					australia.setFoundation(LocalDate.of(1788, 01, 26));
+//					australia.setFoundation(LocalDate.of(1788, 01, 26));
 					// australia.setContinent( "Oceania" );
 					australia.setContinent("Oceania");
 					// australia.setImportance( 1 );

@@ -1,6 +1,6 @@
 package com.kevin.learning.xml.schema;
  
-import java.time.LocalDate;
+//import java.time.LocalDate;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
@@ -15,7 +15,7 @@ public class MashalTest1 {
 		spain.setName("Spain");
 		spain.setCapital("Madrid");
 //		spain.setImportance( 1 );
-		spain.setFoundation( LocalDate.of( 1469, 10, 19 ) );
+//		spain.setFoundation( LocalDate.of( 1469, 10, 19 ) );
 		spain.setPopulation( 45000000 );
 
 		try {

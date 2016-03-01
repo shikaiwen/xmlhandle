@@ -68,11 +68,13 @@ public class Basic {
 		Sheet s = wb.createSheet("房产信息");
 		
 		CellStyle rowStyle = wb.createCellStyle();
+		rowStyle.setAlignment(CellStyle.ALIGN_CENTER);
 //		rowStyle.setFillBackgroundColor(HSSFColor.YELLOW.index);
 //		rowStyle.setFillPattern(CellStyle.SOLID_FOREGROUND);
 		
 //		rowStyle.setFillForegroundColor(IndexedColors.ORANGE.getIndex());
-		rowStyle.setFillForegroundColor(IndexedColors.YELLOW.getIndex());
+//		rowStyle.setFillForegroundColor(IndexedColors.YELLOW.getIndex());
+		rowStyle.setFillForegroundColor(HSSFColor.YELLOW.index);
 		rowStyle.setFillPattern(CellStyle.SOLID_FOREGROUND);
 		
 		
@@ -88,7 +90,7 @@ public class Basic {
 			
 			String value0 = "深圳福田区";
 			c0.setCellValue(value0);
-			CellStyle widthStyle = wb.createCellStyle();
+//			CellStyle widthStyle = wb.createCellStyle();
 			
 //			s.setColumnWidth(0, (value0.length()+1) * 256 *2);
 			
@@ -106,10 +108,11 @@ public class Basic {
 				String str = c.getStringCellValue();
 //				s.setDefaultColumnWidth(arg0);
 				s.setColumnWidth(c.getColumnIndex(), (str.length()+1) * 256 * 2);
+				c.getCellStyle().setAlignment(CellStyle.ALIGN_CENTER);
 			}
 			
 			
-			if(i !=0 && i%3 ==0){
+			if((i+1)%3 ==0){
 //				CellStyle rowStyle = row.getRowStyle();
 
 				row.setRowStyle(rowStyle);
