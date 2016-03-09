@@ -14,6 +14,7 @@ public class MyHashEntryType {
 	public Integer getKey() {
 		return key;
 	}
+	
 
 	public void setKey(Integer key) {
 		this.key = key;
