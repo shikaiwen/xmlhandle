@@ -23,7 +23,7 @@ public class ZanBi {
 
 	
 //	public static final String file = "G:/BaiduYunDownload/zan.xls";
-	public static final String file = "C:/Users/©╜нд/Desktop/tmp/12.xls";
+	public static final String file = "C:/Users/©╜нд/Desktop/tmp/8zan.xls";
 	
 	  private static POIFSFileSystem fs;
 	    private static  HSSFWorkbook wb;
@@ -32,7 +32,8 @@ public class ZanBi {
 	
 	public static void main(String [] args) throws Exception{
 		
-		sum();
+//		sum();
+		t1();
 	}
 	
 	
