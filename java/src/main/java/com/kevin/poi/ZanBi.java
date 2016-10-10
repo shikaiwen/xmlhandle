@@ -23,7 +23,9 @@ public class ZanBi {
 
 	
 //	public static final String file = "G:/BaiduYunDownload/zan.xls";
-	public static final String file = "C:/Users/¿­ÎÄ/Desktop/tmp/8zan.xls";
+//	public static final String file = "C:/Users/¿­ÎÄ/Desktop/tmp/8z1.xls";
+	public static final String file = "G:/BaiduYunDownload/zan2.xls";
+	
 	
 	  private static POIFSFileSystem fs;
 	    private static  HSSFWorkbook wb;
@@ -32,8 +34,8 @@ public class ZanBi {
 	
 	public static void main(String [] args) throws Exception{
 		
-//		sum();
-		t1();
+		sum();
+//		t1();
 	}
 	
 	
@@ -75,7 +77,7 @@ public class ZanBi {
 		fs = new POIFSFileSystem(is);
 		wb = new HSSFWorkbook(fs);
 
-		sheet = wb.getSheetAt(1);
+		sheet = wb.getSheetAt(0);
 
 		int rowNum = sheet.getLastRowNum();
 		row = sheet.getRow(0);
@@ -88,8 +90,8 @@ public class ZanBi {
 			
 			row = sheet.getRow(i);
 
-			HSSFCell senderCell = row.getCell(2);
-			HSSFCell receiverCell = row.getCell(3);
+			HSSFCell senderCell = row.getCell(6);
+			HSSFCell receiverCell = row.getCell(7);
 //			HSSFCell receiverCell = row.getCell(3);
 //			HSSFCell countCell = row.getCell(4);
 			
@@ -117,9 +119,9 @@ public class ZanBi {
 			
 			row = sheet.getRow(i);
 
-			HSSFCell senderCell = row.getCell(2);
-			HSSFCell receiverCell = row.getCell(3);
-			HSSFCell countCell = row.getCell(4);
+			HSSFCell senderCell = row.getCell(6);
+			HSSFCell receiverCell = row.getCell(7);
+			HSSFCell countCell = row.getCell(11);
 			
 			
 			String sender= senderCell.getStringCellValue().trim();

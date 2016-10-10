@@ -19,10 +19,11 @@ public class ArticalLoader {
 		getList();
 	}
 	
-	public static String getRawContent() throws IOException{
+	static String listUrl = "http://blog.csdn.net/shikaiwencn?viewmode=contents";
+	
+	public static String getRawContent(String url ) throws IOException{
 //		HttpURLConnection conn = (HttpURLConnection)new URL("http://www.csdn.net/").openConnection();
-		HttpURLConnection conn = (HttpURLConnection)new URL("http://blog.csdn.net/shikaiwencn?viewmode=contents").openConnection();
-		
+		HttpURLConnection conn = (HttpURLConnection)new URL(url).openConnection();
 //		conn.setRequestProperty("Accept", "text/html, application/xhtml+xml, */*");
 //		conn.setRequestProperty("Accept-Language", "en-US,en;q=0.8,zh-Hans-CN;q=0.5,zh-Hans;q=0.3");
 		conn.setRequestProperty("User-Agent", "Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko");
@@ -42,7 +43,7 @@ public class ArticalLoader {
 	
 	public static void getList() throws IOException{
 //		Document doc = Jsoup.connect("http://blog.csdn.net/shikaiwencn?viewmode=contents").get();
-		Document doc = Jsoup.parse( getRawContent() );
+		Document doc = Jsoup.parse( getRawContent(listUrl) );
 		
 		Elements elts = doc.select("#article_list .list_item");
 		Iterator<Element> iter = elts.iterator();
@@ -59,6 +60,15 @@ public class ArticalLoader {
 		
 		
 		System.out.println(elts.size());
+	}
+	
+	
+	public static void handleItem(String title,String href) throws IOException{
+		
+		String content = getRawContent(href);
+		
+		
+		
 	}
 	
 	
